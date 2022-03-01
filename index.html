@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>React Standalone</title>
+
+    <!-- Primary Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="author" content="Onur Toycu" />
+    <meta name="description" content="A Standalone React Boiletplate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Dependencies Development -->
+    <!-- You can add more React Librarys here -->
+    <script src="vendor/babel.min.js" crossorigin></script>
+    <script src="vendor/react.development.js" crossorigin></script>
+    <script src="vendor/react-dom.development.js" crossorigin></script>
+    <script src="vendor/history.development.js" crossorigin></script>
+    <script src="vendor/react-router.development.js" crossorigin></script>
+    <script src="vendor/react-router-dom.development.js" crossorigin></script>
+
+    <!-- Dependencies Production -->
+    <!-- You can add more React Librarys here -->
+    <!-- <script src="vendor/babel.min.js" crossorigin></script>
+    <script src="vendor/react.production.min.js" crossorigin></script>
+    <script src="vendor/react-dom.production.min.js" crossorigin></script>
+    <script src="vendor/history.production.min.js" crossorigin></script>
+    <script src="vendor/react-router.production.min.js" crossorigin></script>
+    <script src="vendor/react-router-dom.production.min.js" crossorigin></script> -->
+
+    <!-- Dependencies Bootstrap -->
+    <script src="https://unpkg.com/react-bootstrap@2.1.2/dist/react-bootstrap.min.js" crossorigin></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+
+    <!-- Import Workaround -->
+    <!-- Add Component Files you would normally import -->
+    <!-- Babel will compile JSX if you provide type="text/babel" -->
+    <script src="js/App.jsx" type="text/babel"></script>
+    <script src="js/Layout.jsx" type="text/babel"></script>
+    <script src="js/404.jsx" type="text/babel"></script>
+    <script src="js/About.jsx" type="text/babel"></script>
+    <script src="js/Page1.jsx" type="text/babel"></script>
+    <script src="js/Page2.jsx" type="text/babel"></script>
+    <script src="js/Page3.jsx" type="text/babel"></script>
+
+    <!-- Import Workaround -->
+    <!-- Add Library exports you would normally import -->
+    <script type="text/babel">
+      //React
+      const useRef = React.useRef;
+      const useState = React.useState;
+      const useReducer = React.useReducer;
+      const useEffect = React.useEffect;
+      const useCallback = React.useCallback;
+      const useMemo = React.useMemo;
+      const createContext = React.createContext;
+      const useContext = React.useContext;
+      //React Router
+      const BrowserRouter = ReactRouterDOM.BrowserRouter;
+      const Routes = ReactRouterDOM.Routes;
+      const Route = ReactRouterDOM.Route;
+      const Link = ReactRouterDOM.Link;
+      const Outlet = ReactRouterDOM.Outlet;
+      //Bootstrap
+      const Container = ReactBootstrap.Container;
+      const Row = ReactBootstrap.Row;
+      const Col = ReactBootstrap.Col;
+      const Navbar = ReactBootstrap.Navbar;
+      const Nav = ReactBootstrap.Nav;
+    </script>
+  </head>
+
+  <body>
+    <noscript>
+      If you're seeing this message, that means
+      <strong>JavaScript has been disabled on your browser</strong>, 
+      please enable JS to make this app work.
+    </noscript>
+      
+    <div id="root"></div>
+
+    <script type="text/babel">
+      ReactDOM.render(App(), document.getElementById('root'));
+    </script>
+  </body>
+</html>
